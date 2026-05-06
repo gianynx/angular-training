@@ -7,6 +7,7 @@ import { AfterViewChecked, AfterContentChecked, AfterContentInit, AfterViewInit,
 })
 export class ProvaComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
+  // esempio di dati da visualizzare nel template
   dogs = [
     {
       name: "Shiba Inu",
@@ -15,6 +16,7 @@ export class ProvaComponent implements OnInit, DoCheck, AfterContentInit, AfterC
     }
   ]
 
+  // esempio di ciclo di vita di un componente Angular
   constructor() {
     console.log("constructor");
   }
