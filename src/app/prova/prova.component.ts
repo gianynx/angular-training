@@ -24,6 +24,13 @@ export class ProvaComponent implements OnInit, DoCheck, AfterContentInit, AfterC
   image1 = "https://4kwallpapers.com/images/walls/thumbs_2t/25549.jpg"
   image2 = "https://m.media-amazon.com/images/I/61NWE9Im6dL._AC_UF894,1000_QL80_.jpg"
 
+  // esempio di metodo per gestire un evento di click su un pulsante nel template
+  onClick() {
+    console.log("Button clicked!");
+
+    alert("Button clicked!");
+  }
+
   // esempio di ciclo di vita di un componente Angular
   constructor() {
     console.log("constructor");

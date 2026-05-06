@@ -25,7 +25,7 @@
     <mat-card-title>Example title</mat-card-title>
     <mat-card-subtitle>Example subtitle</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="image" alt="Example image">
+  <img mat-card-image [src]="image" alt="Example">
   <mat-card-content>
     <p>
       Example content
@@ -36,3 +36,6 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
+
+<!-- esempio di utilizzo di un evento di click su un pulsante per triggerare un metodo del componente -->
+<button mat-flat-button color="primary" (click)="onClick()">Click me!</button>
