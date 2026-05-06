@@ -39,3 +39,9 @@
 
 <!-- esempio di utilizzo di un evento di click su un pulsante per triggerare un metodo del componente -->
 <button mat-flat-button color="primary" (click)="onClick()">Click me!</button>
+
+<!-- esempio di utilizzo di un evento di input su un campo di testo per triggerare un metodo del componente -->
+<mat-form-field class="example-full-width">
+  <mat-label>Favorite food</mat-label>
+  <input matInput placeholder="Ex. Pizza" (input)="onInput($event)" />
+</mat-form-field>
