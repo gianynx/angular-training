@@ -63,4 +63,15 @@
       <input matInput placeholder="Ex. Pizza" (input)="onInput($event)" />
     </mat-form-field>
   </div>
+
+  <div id="example-two-way-binding">
+    <h2>Two-way binding</h2>
+
+    <!-- esempio di utilizzo del two-way binding per sincronizzare il valore di un campo di testo con una proprietà del componente -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" (input)="onInput2wb($event)" />
+    </mat-form-field>
+    <p>{{ value }}</p>
+  </div>
 </div>

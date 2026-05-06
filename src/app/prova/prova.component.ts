@@ -56,6 +56,14 @@ export class ProvaComponent
     console.log((<HTMLInputElement>e.target).value);
   }
 
+  // esempio di utilizzo del two-way binding
+  value = '';
+  onInput2wb(e: Event) {
+    console.log((<HTMLInputElement>e.target).value);
+
+    this.value = (<HTMLInputElement>e.target).value;
+  }
+
   // esempio di ciclo di vita di un componente Angular
   constructor() {
     console.log('constructor');
