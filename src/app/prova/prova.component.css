@@ -6,3 +6,12 @@
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
+
+mat-card {
+  margin: 20px;
+}
+
+button {
+  margin-top: 50px;
+  margin: 20px;
+}
