@@ -57,11 +57,20 @@ export class ProvaComponent
   }
 
   // esempio di utilizzo del two-way binding
-  value = '';
+  value = 'pizza';
+
   onInput2wb(e: Event) {
     console.log((<HTMLInputElement>e.target).value);
 
     this.value = (<HTMLInputElement>e.target).value;
+  }
+
+  onClick2wb() {
+    this.value = 'Ho cliccato il bottone!';
+  }
+
+  onReset2wb() {
+    this.value = '';
   }
 
   // esempio di ciclo di vita di un componente Angular

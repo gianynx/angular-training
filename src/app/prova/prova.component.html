@@ -70,8 +70,14 @@
     <!-- esempio di utilizzo del two-way binding per sincronizzare il valore di un campo di testo con una proprietà del componente -->
     <mat-form-field class="example-full-width">
       <mat-label>Favorite food</mat-label>
-      <input matInput placeholder="Ex. Pizza" (input)="onInput2wb($event)" />
+      <input matInput placeholder="Ex. Pizza" [(ngModel)]="value" />
     </mat-form-field>
-    <p>{{ value }}</p>
+    <p class="fw-bold">{{ value }}</p>
+    <button mat-stroked-button color="primary" (click)="onClick2wb()">
+      Click me!
+    </button>
+    <button mat-stroked-button color="warn" (click)="onReset2wb()" class="mx-2">
+      Reset
+    </button>
   </div>
 </div>
