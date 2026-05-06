@@ -19,6 +19,11 @@ export class ProvaComponent implements OnInit, DoCheck, AfterContentInit, AfterC
   // esempio di proprietà per abilitare/disabilitare un pulsante nel template
   isButtonDisabled = false
 
+  // esempio di immagini da visualizzare nel template tramite property binding
+  image = ""
+  image1 = "https://4kwallpapers.com/images/walls/thumbs_2t/25549.jpg"
+  image2 = "https://m.media-amazon.com/images/I/61NWE9Im6dL._AC_UF894,1000_QL80_.jpg"
+
   // esempio di ciclo di vita di un componente Angular
   constructor() {
     console.log("constructor");
@@ -30,6 +35,17 @@ export class ProvaComponent implements OnInit, DoCheck, AfterContentInit, AfterC
     // esempio di utilizzo di setInterval per modificare una proprietà del componente e triggerare il ciclo di vita
     setInterval(() => {
       this.isButtonDisabled = !this.isButtonDisabled;
+    }, 2000);
+
+    // esempio di utilizzo di setInterval per modificare una proprietà del componente e triggerare il ciclo di vita
+    let counter = 0;
+    setInterval(() => {
+      if (counter % 2 == 0) {
+        this.image = this.image1;
+      } else {
+        this.image = this.image2;
+      }
+      counter++;
     }, 2000);
   }
 
