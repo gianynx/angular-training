@@ -16,6 +16,9 @@ export class ProvaComponent implements OnInit, DoCheck, AfterContentInit, AfterC
     }
   ]
 
+  // esempio di proprietà per abilitare/disabilitare un pulsante nel template
+  isButtonDisabled = false;
+
   // esempio di ciclo di vita di un componente Angular
   constructor() {
     console.log("constructor");

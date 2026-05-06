@@ -1,4 +1,4 @@
-// esempio di componente Angular con ciclo di vita completo e dati da visualizzare nel template tramite string interpolation
+<!-- esempio di componente Angular con ciclo di vita completo e dati da visualizzare nel template tramite string interpolation -->
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title>Shiba Inu</mat-card-title>
@@ -14,3 +14,6 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
+
+<!-- esempio di utilizzo di una direttiva Angular per abilitare/disabilitare un pulsante in base a una proprietà del componente tramite property binding -->
+<button mat-raised-button color="primary" [disabled]="isButtonDisabled">Click me!</button>
