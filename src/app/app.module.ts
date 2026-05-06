@@ -14,7 +14,7 @@ import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
-    ProvaComponent
+    ProvaComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +23,7 @@ import {MatInputModule} from '@angular/material/input';
     MatSliderModule,
     MatCardModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
