@@ -31,6 +31,12 @@ export class ProvaComponent implements OnInit, DoCheck, AfterContentInit, AfterC
     alert("Button clicked!");
   }
 
+  // esempio di metodo per gestire un evento di input su un campo di testo nel template
+  onInput(e: any) {
+    console.log("Event: ", e);
+    console.log("Input value: ", e.target.value);
+  }
+
   // esempio di ciclo di vita di un componente Angular
   constructor() {
     console.log("constructor");
