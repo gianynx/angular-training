@@ -17,7 +17,7 @@ export class ProvaComponent implements OnInit, DoCheck, AfterContentInit, AfterC
   ]
 
   // esempio di proprietà per abilitare/disabilitare un pulsante nel template
-  isButtonDisabled = false;
+  isButtonDisabled = false
 
   // esempio di ciclo di vita di un componente Angular
   constructor() {
@@ -26,6 +26,11 @@ export class ProvaComponent implements OnInit, DoCheck, AfterContentInit, AfterC
 
   ngOnInit(): void {
     console.log("ngOnInit");
+
+    // esempio di utilizzo di setInterval per modificare una proprietà del componente e triggerare il ciclo di vita
+    setInterval(() => {
+      this.isButtonDisabled = !this.isButtonDisabled;
+    }, 2000);
   }
 
   ngDoCheck(): void {
