@@ -23,9 +23,7 @@
     <h2>Property Binding</h2>
 
     <!-- esempio di utilizzo di una direttiva Angular per abilitare/disabilitare un pulsante in base a una proprietà del componente tramite property binding -->
-    <button mat-raised-button color="primary" [disabled]="isButtonDisabled">
-      Click me!
-    </button>
+    <button mat-raised-button color="primary" [disabled]="isButtonDisabled">Click me!</button>
 
     <!-- esempio di utilizzo di property binding per visualizzare immagini nel template -->
     <mat-card class="example-card mt-5">
@@ -49,9 +47,7 @@
     <h2>Event Binding</h2>
 
     <!-- esempio di utilizzo di un evento di click su un pulsante per triggerare un metodo del componente -->
-    <button mat-flat-button color="primary" (click)="onClick()">
-      Click me!
-    </button>
+    <button mat-flat-button color="primary" (click)="onClick()">Click me!</button>
   </div>
 
   <div id="example-event-binding-input">
@@ -73,12 +69,8 @@
       <input matInput placeholder="Ex. Pizza" [(ngModel)]="value" />
     </mat-form-field>
     <p class="fw-bold">{{ value }}</p>
-    <button mat-stroked-button color="primary" (click)="onClick2wb()">
-      Click me!
-    </button>
-    <button mat-stroked-button color="warn" (click)="onReset2wb()" class="mx-2">
-      Reset
-    </button>
+    <button mat-stroked-button color="primary" (click)="onClick2wb()">Click me!</button>
+    <button mat-stroked-button color="warn" (click)="onReset2wb()" class="mx-2">Reset</button>
   </div>
 
   <div>
@@ -89,16 +81,9 @@
       <mat-list-item *ngFor="let user of users">
         <span class="fw-bold">{{ user.name }}</span>
         - {{ user.age }} years old
-        <span class="badge bg-primary text-white ms-2" *ngIf="user.isOnline">
-          Online
-        </span>
+        <span class="badge bg-primary text-white ms-2" *ngIf="user.isOnline"> Online </span>
         <span>
-          <span
-            class="badge bg-secondary text-white ms-2"
-            *ngIf="!user.isOnline"
-          >
-            Offline
-          </span>
+          <span class="badge bg-secondary text-white ms-2" *ngIf="!user.isOnline"> Offline </span>
         </span>
       </mat-list-item>
     </mat-list>
