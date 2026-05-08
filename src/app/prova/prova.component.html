@@ -78,7 +78,8 @@
 
     <!-- esempio di utilizzo della direttiva ngFor per iterare su un array di oggetti e visualizzarli nel template -->
     <mat-list>
-      <mat-list-item *ngFor="let user of users">
+      <mat-list-item *ngFor="let user of users; index as i">
+        {{ i + 1 }}.
         <span class="fw-bold">{{ user.name }}</span>
         - {{ user.age }} years old
         <span class="badge bg-primary text-white ms-2" *ngIf="user.isOnline"> Online </span>
