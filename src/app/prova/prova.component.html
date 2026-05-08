@@ -92,4 +92,22 @@
       </mat-list-item>
     </mat-list>
   </div>
+
+  <div>
+    <h2>NgClass</h2>
+
+    <!-- esempio di utilizzo della direttiva ngClass per applicare classi CSS dinamicamente in base a una condizione -->
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let user of users"
+        [ngClass]="{
+          'styleOnline fontSizeOnline': user.isOnline,
+          styleOffline: !user.isOnline,
+          'text-decoration-line-through': user.isOnHoliday
+        }">
+        <span class="fw-bold">{{ user.name }}</span>
+      </li>
+    </ul>
+  </div>
 </div>

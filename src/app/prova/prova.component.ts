@@ -15,14 +15,7 @@ import {
   styleUrls: ['./prova.component.css'],
 })
 export class ProvaComponent
-  implements
-    OnInit,
-    DoCheck,
-    AfterContentInit,
-    AfterContentChecked,
-    AfterViewInit,
-    AfterViewChecked,
-    OnDestroy
+  implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy
 {
   // esempio di dati da visualizzare nel template
   dogs = [
@@ -39,8 +32,7 @@ export class ProvaComponent
   // esempio di immagini da visualizzare nel template tramite property binding
   image = '';
   image1 = 'https://4kwallpapers.com/images/walls/thumbs_2t/25549.jpg';
-  image2 =
-    'https://m.media-amazon.com/images/I/61NWE9Im6dL._AC_UF894,1000_QL80_.jpg';
+  image2 = 'https://m.media-amazon.com/images/I/61NWE9Im6dL._AC_UF894,1000_QL80_.jpg';
 
   // esempio di metodo per gestire un evento di click su un pulsante nel template
   onClick() {
@@ -75,11 +67,11 @@ export class ProvaComponent
 
   // esempio di dati da visualizzare nel template tramite ngFor
   users = [
-    { name: 'Mario', age: 30, isOnline: true },
-    { name: 'Luigi', age: 28, isOnline: false },
-    { name: 'Peach', age: 25, isOnline: true },
-    { name: 'Bowser', age: 40, isOnline: false },
-    { name: 'Toad', age: 35, isOnline: true },
+    { name: 'Mario', age: 30, isOnline: true, isOnHoliday: false },
+    { name: 'Luigi', age: 28, isOnline: false, isOnHoliday: true },
+    { name: 'Antonio', age: 25, isOnline: true, isOnHoliday: false },
+    { name: 'Marco', age: 40, isOnline: false, isOnHoliday: false },
+    { name: 'Daniele', age: 35, isOnline: true, isOnHoliday: false },
   ];
 
   // esempio di ciclo di vita di un componente Angular

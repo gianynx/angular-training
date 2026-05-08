@@ -2,8 +2,24 @@
   width: 300px;
   max-width: 400px;
 }
-
 .example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+}
+
+.styleOnline {
+  background-color: #518208;
+  color: #ffffff;
+}
+.fontSizeOnline {
+  font-size: 18px;
+}
+.styleOffline {
+  background-color: #e14607;
+  color: #ffffff;
+}
+ul > li.list-group-item:hover {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
 }
