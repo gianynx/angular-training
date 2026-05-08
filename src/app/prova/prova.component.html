@@ -82,9 +82,7 @@
         <span class="fw-bold">{{ user.name }}</span>
         - {{ user.age }} years old
         <span class="badge bg-primary text-white ms-2" *ngIf="user.isOnline"> Online </span>
-        <span>
-          <span class="badge bg-secondary text-white ms-2" *ngIf="!user.isOnline"> Offline </span>
-        </span>
+        <span class="badge bg-secondary text-white ms-2" *ngIf="!user.isOnline"> Offline </span>
       </mat-list-item>
     </mat-list>
   </div>
