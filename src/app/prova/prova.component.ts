@@ -73,6 +73,15 @@ export class ProvaComponent
     this.value = '';
   }
 
+  // esempio di dati da visualizzare nel template tramite ngFor
+  users = [
+    { name: 'Mario', age: 30, isOnline: true },
+    { name: 'Luigi', age: 28, isOnline: false },
+    { name: 'Peach', age: 25, isOnline: true },
+    { name: 'Bowser', age: 40, isOnline: false },
+    { name: 'Toad', age: 35, isOnline: true },
+  ];
+
   // esempio di ciclo di vita di un componente Angular
   constructor() {
     console.log('constructor');

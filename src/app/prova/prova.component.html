@@ -80,4 +80,27 @@
       Reset
     </button>
   </div>
+
+  <div>
+    <h2>NgFor</h2>
+
+    <!-- esempio di utilizzo della direttiva ngFor per iterare su un array di oggetti e visualizzarli nel template -->
+    <mat-list>
+      <mat-list-item *ngFor="let user of users">
+        <span class="fw-bold">{{ user.name }}</span>
+        - {{ user.age }} years old
+        <span class="badge bg-primary text-white ms-2" *ngIf="user.isOnline">
+          Online
+        </span>
+        <span>
+          <span
+            class="badge bg-secondary text-white ms-2"
+            *ngIf="!user.isOnline"
+          >
+            Offline
+          </span>
+        </span>
+      </mat-list-item>
+    </mat-list>
+  </div>
 </div>
