@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { User } from './models/user.model';
 
 @Component({
@@ -6,8 +6,11 @@ import { User } from './models/user.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'my-project';
+
+  // esempio di utilizzo del decorator ViewChild per accedere a un elemento del template
+  @ViewChild('inputSaluti') inputSaluti!: ElementRef;
 
   // esempio di dati da visualizzare nel template tramite ngFor
   users: User[] = [
@@ -32,5 +35,13 @@ export class AppComponent {
   // esempio di metodo per gestire i dati ricevuti da un componente figlio tramite @Output
   onGetData(user: User) {
     console.log('Dati ricevuti dal componente figlio!', user);
+  }
+
+  ngOnInit(): void {
+    console.log("Valore dell'input:", this.inputSaluti);
+  }
+
+  ngAfterViewInit(): void {
+    console.log("Valore dell'input dopo la view init:", this.inputSaluti);
   }
 }
