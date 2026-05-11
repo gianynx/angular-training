@@ -7,6 +7,7 @@ import {
   DoCheck,
   OnInit,
   OnDestroy,
+  Input,
 } from '@angular/core';
 
 @Component({
@@ -17,6 +18,9 @@ import {
 export class ProvaComponent
   implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy
 {
+  // esempio di utilizzo di @Input per ricevere dati da un componente genitore
+  @Input() data: any;
+
   // esempio di dati da visualizzare nel template
   dogs = [
     {
@@ -65,15 +69,6 @@ export class ProvaComponent
     this.value = '';
   }
 
-  // esempio di dati da visualizzare nel template tramite ngFor
-  users = [
-    { name: 'Mario', age: 30, isOnline: true, isOnHoliday: false },
-    { name: 'Luigi', age: 28, isOnline: false, isOnHoliday: true },
-    { name: 'Antonio', age: 25, isOnline: true, isOnHoliday: false },
-    { name: 'Marco', age: 40, isOnline: false, isOnHoliday: false },
-    { name: 'Daniele', age: 35, isOnline: true, isOnHoliday: false },
-  ];
-
   // esempio di ciclo di vita di un componente Angular
   constructor() {
     console.log('constructor');
@@ -81,6 +76,7 @@ export class ProvaComponent
 
   ngOnInit(): void {
     console.log('ngOnInit');
+    console.log(this.data);
 
     // esempio di utilizzo di setInterval per modificare una proprietà del componente e triggerare il ciclo di vita
     setInterval(() => {

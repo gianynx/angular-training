@@ -79,7 +79,7 @@
     <!-- esempio di utilizzo della direttiva ngFor per iterare su un array di oggetti e visualizzarli nel template -->
     <!-- esempio di utilizzo delle direttive ngIf e ngStyle per visualizzare un'icona diversa in base a una proprietà dell'oggetto e per applicare uno stile dinamico in base a una condizione -->
     <mat-list>
-      <mat-list-item *ngFor="let user of users; index as i">
+      <mat-list-item *ngFor="let user of data; index as i">
         {{ i + 1 }}.
         <span class="mx-2">
           <i class="fas fa-check-circle" [ngStyle]="{ color: 'green' }" *ngIf="user.isOnline"></i>
@@ -100,7 +100,7 @@
     <ul class="list-group">
       <li
         class="list-group-item"
-        *ngFor="let user of users"
+        *ngFor="let user of data"
         [ngClass]="{
           'styleOnline fontSizeOnline': user.isOnline,
           styleOffline: !user.isOnline,
