@@ -10,6 +10,8 @@ import {
   AfterViewChecked,
   OnDestroy,
   SimpleChanges,
+  Output,
+  EventEmitter,
 } from '@angular/core';
 
 @Component({
@@ -31,6 +33,9 @@ export class ProvaComponent
   // esempio di utilizzo di @Input per ricevere dati da un componente genitore
   @Input() data: any;
 
+  // esempio di utilizzo di @Output per inviare dati a un componente genitore
+  @Output() sendData = new EventEmitter<any>();
+
   // esempio di dati da visualizzare nel template
   dogs = [
     {
@@ -45,8 +50,10 @@ export class ProvaComponent
 
   // esempio di immagini da visualizzare nel template tramite property binding
   image = '';
-  image1 = 'https://4kwallpapers.com/images/walls/thumbs_2t/25549.jpg';
-  image2 = 'https://m.media-amazon.com/images/I/61NWE9Im6dL._AC_UF894,1000_QL80_.jpg';
+  image1 =
+    'https://plus.unsplash.com/premium_photo-1666805690051-134cd145fd24?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+  image2 =
+    'https://images.unsplash.com/photo-1778088442549-352896b14c09?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
   // esempio di metodo per gestire un evento di click su un pulsante nel template
   onClick() {
