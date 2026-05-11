@@ -47,7 +47,7 @@
     <h2>Event Binding</h2>
 
     <!-- esempio di utilizzo di un evento di click su un pulsante per triggerare un metodo del componente -->
-    <button mat-flat-button color="primary" (click)="onClick()">Click me!</button>
+    <button mat-stroked-button color="primary" (click)="onClick()">Click me!</button>
   </div>
 
   <div id="example-event-binding-input">
@@ -73,8 +73,8 @@
     <button mat-stroked-button color="warn" (click)="onReset2wb()" class="mx-2">Reset</button>
   </div>
 
-  <div>
-    <h2>NgFor</h2>
+  <div id="example-ngFor-data-from-parent-to-child">
+    <h2>NgFor / Dati Parent -> Child</h2>
 
     <!-- esempio di utilizzo della direttiva ngFor per iterare su un array di oggetti e visualizzarli nel template -->
     <!-- esempio di utilizzo delle direttive ngIf e ngStyle per visualizzare un'icona diversa in base a una proprietà dell'oggetto e per applicare uno stile dinamico in base a una condizione -->
@@ -93,8 +93,8 @@
     </mat-list>
   </div>
 
-  <div>
-    <h2>NgClass</h2>
+  <div id="example-ngClass-data-from-parent-to-child">
+    <h2>NgClass / Dati Parent -> Child</h2>
 
     <!-- esempio di utilizzo della direttiva ngClass per applicare classi CSS dinamicamente in base a una condizione -->
     <ul class="list-group">
@@ -109,5 +109,19 @@
         <span class="fw-bold">{{ user.name }}</span>
       </li>
     </ul>
+  </div>
+</div>
+
+<div class="mt-5 p-3">
+  <div id="example-data-from-child-to-parent">
+    <h2>Dati Child -> Parent</h2>
+
+    <!-- esempio di utilizzo di un evento personalizzato per inviare dati da un componente figlio a un componente genitore -->
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="sendData.emit({ name: 'Test User', age: 25, isOnline: true, isOnHoliday: false })">
+      Click me!
+    </button>
   </div>
 </div>

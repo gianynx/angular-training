@@ -1,5 +1,5 @@
 <!-- esempio di utilizzo di un componente figlio (ProvaComponent) all'interno del template del componente genitore (AppComponent) -->
-<app-prova [data]="users"></app-prova>
+<app-prova [data]="users" (sendData)="onGetData($event)"></app-prova>
 
 <!-- <div class="d-flex justify-content-center align-items-center">
   <div>

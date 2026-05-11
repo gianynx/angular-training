@@ -13,6 +13,7 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-prova',
@@ -31,10 +32,10 @@ export class ProvaComponent
     OnDestroy
 {
   // esempio di utilizzo di @Input per ricevere dati da un componente genitore
-  @Input() data: any;
+  @Input() data: User[] = [];
 
   // esempio di utilizzo di @Output per inviare dati a un componente genitore
-  @Output() sendData = new EventEmitter<any>();
+  @Output() sendData = new EventEmitter<User>();
 
   // esempio di dati da visualizzare nel template
   dogs = [

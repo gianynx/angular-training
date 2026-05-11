@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './models/user.model';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent {
   title = 'my-project';
 
   // esempio di dati da visualizzare nel template tramite ngFor
-  users = [
+  users: User[] = [
     { name: 'Mario', age: 30, isOnline: true, isOnHoliday: false },
     { name: 'Luigi', age: 28, isOnline: false, isOnHoliday: true },
     { name: 'Antonio', age: 25, isOnline: true, isOnHoliday: false },
@@ -26,5 +27,10 @@ export class AppComponent {
       { name: 'Gabriele', age: 41, isOnline: true, isOnHoliday: true },
       { name: 'Giacomo', age: 36, isOnline: false, isOnHoliday: true },
     ];
+  }
+
+  // esempio di metodo per gestire i dati ricevuti da un componente figlio tramite @Output
+  onGetData(user: User) {
+    console.log('Dati ricevuti dal componente figlio!', user);
   }
 }
