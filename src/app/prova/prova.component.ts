@@ -1,13 +1,15 @@
 import {
-  AfterViewChecked,
-  AfterContentChecked,
-  AfterContentInit,
-  AfterViewInit,
   Component,
-  DoCheck,
-  OnInit,
-  OnDestroy,
   Input,
+  OnInit,
+  OnChanges,
+  DoCheck,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy,
+  SimpleChanges,
 } from '@angular/core';
 
 @Component({
@@ -16,7 +18,15 @@ import {
   styleUrls: ['./prova.component.css'],
 })
 export class ProvaComponent
-  implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy
+  implements
+    OnInit,
+    OnChanges,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked,
+    OnDestroy
 {
   // esempio di utilizzo di @Input per ricevere dati da un componente genitore
   @Input() data: any;
@@ -93,6 +103,11 @@ export class ProvaComponent
       }
       counter++;
     }, 2000);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('ngOnChanges');
+    console.log(changes);
   }
 
   ngDoCheck(): void {
