@@ -1,13 +1,19 @@
 <!-- esempio di utilizzo di un componente figlio (ProvaComponent) all'interno del template del componente genitore (AppComponent) -->
 <app-prova [data]="users" (sendData)="onGetData($event)"></app-prova>
 
-<!-- <div class="d-flex justify-content-center align-items-center">
-  <div>
-    <h2>Button AppComponent</h2>
+<div class="container mt-5">
+  <div class="row">
+    <div id="example-decorator-viewchild" class="col">
+      <h2>ViewChild decorator</h2>
 
-    <button mat-raised-button color="primary" (click)="onClick()">Click me!</button>
+      <!-- esempio di utilizzo del decorator ViewChild -->
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="Sushi" #inputSaluti />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="onClick()" class="mx-2">Click me!</button>
+      </form>
+    </div>
   </div>
-</div> -->
-
-<!-- esempio di utilizzo del decorator ViewChild -->
-<input #inputSaluti value="ciao" />
+</div>
