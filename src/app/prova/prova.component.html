@@ -1,127 +1,127 @@
-<div class="d-flex flex-row align-items-start gap-5 p-3">
-  <div id="example-string-interpolation">
-    <h2>String interpolation</h2>
+<div class="container mt-5">
+  <div class="row row-cols-4 gy-5">
+    <div id="example-string-interpolation" class="col">
+      <h2>String interpolation</h2>
 
-    <!-- esempio di componente Angular con ciclo di vita completo e dati da visualizzare nel template tramite string interpolation -->
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{ dogs[0].name.toUpperCase() }}</p>
-        <p>{{ dogs[0].description }}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
+      <!-- esempio di componente Angular con ciclo di vita completo e dati da visualizzare nel template tramite string interpolation -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ dogs[0].name.toUpperCase() }}</p>
+          <p>{{ dogs[0].description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
 
-  <div id="examples-property-binding" class="d-flex flex-column">
-    <h2>Property Binding</h2>
+    <div id="examples-property-binding" class="col">
+      <h2>Property Binding</h2>
 
-    <!-- esempio di utilizzo di una direttiva Angular per abilitare/disabilitare un pulsante in base a una proprietà del componente tramite property binding -->
-    <button mat-raised-button color="primary" [disabled]="isButtonDisabled">Click me!</button>
+      <!-- esempio di utilizzo di una direttiva Angular per abilitare/disabilitare un pulsante in base a una proprietà del componente tramite property binding -->
+      <button mat-raised-button color="primary" [disabled]="isButtonDisabled">Click me!</button>
 
-    <!-- esempio di utilizzo di property binding per visualizzare immagini nel template -->
-    <mat-card class="example-card mt-5">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Example title</mat-card-title>
-        <mat-card-subtitle>Example subtitle</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image [src]="image" alt="Example" />
-      <mat-card-content>
-        <p>Example content</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
+      <!-- esempio di utilizzo di property binding per visualizzare immagini nel template -->
+      <mat-card class="example-card mt-5">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Example title</mat-card-title>
+          <mat-card-subtitle>Example subtitle</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="image" alt="Example" />
+        <mat-card-content>
+          <p>Example content</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
 
-  <div id="example-event-binding">
-    <h2>Event Binding</h2>
+    <div id="example-event-binding" class="col">
+      <h2>Event Binding</h2>
 
-    <!-- esempio di utilizzo di un evento di click su un pulsante per triggerare un metodo del componente -->
-    <button mat-stroked-button color="primary" (click)="onClick()">Click me!</button>
-  </div>
+      <!-- esempio di utilizzo di un evento di click su un pulsante per triggerare un metodo del componente -->
+      <button mat-stroked-button color="primary" (click)="onClick()">Click me!</button>
+    </div>
 
-  <div id="example-event-binding-input">
-    <h2>Event Binding - Input</h2>
+    <div id="example-event-binding-input" class="col">
+      <h2>Event Binding - Input</h2>
 
-    <!-- esempio di utilizzo di un evento di input su un campo di testo per triggerare un metodo del componente -->
-    <mat-form-field class="example-full-width">
-      <mat-label>Favorite food</mat-label>
-      <input matInput placeholder="Ex. Pizza" (input)="onInput($event)" />
-    </mat-form-field>
-  </div>
+      <!-- esempio di utilizzo di un evento di input su un campo di testo per triggerare un metodo del componente -->
+      <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" (input)="onInput($event)" />
+      </mat-form-field>
+    </div>
 
-  <div id="example-two-way-binding">
-    <h2>Two-way binding</h2>
+    <div id="example-two-way-binding" class="col">
+      <h2>Two-way binding</h2>
 
-    <!-- esempio di utilizzo del two-way binding per sincronizzare il valore di un campo di testo con una proprietà del componente -->
-    <mat-form-field class="example-full-width">
-      <mat-label>Favorite food</mat-label>
-      <input matInput placeholder="Ex. Pizza" [(ngModel)]="value" />
-    </mat-form-field>
-    <p class="fw-bold">{{ value }}</p>
-    <button mat-stroked-button color="primary" (click)="onClick2wb()">Click me!</button>
-    <button mat-stroked-button color="warn" (click)="onReset2wb()" class="mx-2">Reset</button>
-  </div>
+      <!-- esempio di utilizzo del two-way binding per sincronizzare il valore di un campo di testo con una proprietà del componente -->
+      <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" [(ngModel)]="value" />
+      </mat-form-field>
+      <p class="fw-bold">{{ value }}</p>
+      <button mat-stroked-button color="primary" (click)="onClick2wb()">Click me!</button>
+      <button mat-stroked-button color="warn" (click)="onReset2wb()" class="mx-2">Reset</button>
+    </div>
 
-  <div id="example-ngFor-data-from-parent-to-child">
-    <h2>NgFor / Dati Parent -> Child</h2>
+    <div id="example-ngFor-data-from-parent-to-child" class="col">
+      <h2>NgFor / Dati Parent -> Child</h2>
 
-    <!-- esempio di utilizzo della direttiva ngFor per iterare su un array di oggetti e visualizzarli nel template -->
-    <!-- esempio di utilizzo delle direttive ngIf e ngStyle per visualizzare un'icona diversa in base a una proprietà dell'oggetto e per applicare uno stile dinamico in base a una condizione -->
-    <mat-list>
-      <mat-list-item *ngFor="let user of data; index as i">
-        {{ i + 1 }}.
-        <span class="mx-2">
-          <i class="fas fa-check-circle" [ngStyle]="{ color: 'green' }" *ngIf="user.isOnline"></i>
-          <i class="fas fa-times-circle" [ngStyle]="{ color: 'red' }" *ngIf="!user.isOnline"></i>
-        </span>
-        <span class="fw-bold">{{ user.name }}</span>
-        - {{ user.age }} years old
-        <span class="badge bg-primary text-white ms-2" *ngIf="user.isOnline"> Online </span>
-        <span class="badge bg-secondary text-white ms-2" *ngIf="!user.isOnline"> Offline </span>
-      </mat-list-item>
-    </mat-list>
-  </div>
+      <!-- esempio di utilizzo della direttiva ngFor per iterare su un array di oggetti e visualizzarli nel template -->
+      <!-- esempio di utilizzo delle direttive ngIf e ngStyle per visualizzare un'icona diversa in base a una proprietà dell'oggetto e per applicare uno stile dinamico in base a una condizione -->
+      <mat-list>
+        <mat-list-item *ngFor="let user of data; index as i">
+          {{ i + 1 }}.
+          <span class="mx-2">
+            <i class="fas fa-check-circle" [ngStyle]="{ color: 'green' }" *ngIf="user.isOnline"></i>
+            <i class="fas fa-times-circle" [ngStyle]="{ color: 'red' }" *ngIf="!user.isOnline"></i>
+          </span>
+          <span class="fw-bold">{{ user.name }}</span>
+          - {{ user.age }} years old
+          <span class="badge bg-primary text-white ms-2" *ngIf="user.isOnline"> Online </span>
+          <span class="badge bg-secondary text-white ms-2" *ngIf="!user.isOnline"> Offline </span>
+        </mat-list-item>
+      </mat-list>
+    </div>
 
-  <div id="example-ngClass-data-from-parent-to-child">
-    <h2>NgClass / Dati Parent -> Child</h2>
+    <div id="example-ngClass-data-from-parent-to-child" class="col">
+      <h2>NgClass / Dati Parent -> Child</h2>
 
-    <!-- esempio di utilizzo della direttiva ngClass per applicare classi CSS dinamicamente in base a una condizione -->
-    <ul class="list-group">
-      <li
-        class="list-group-item"
-        *ngFor="let user of data"
-        [ngClass]="{
-          'styleOnline fontSizeOnline': user.isOnline,
-          styleOffline: !user.isOnline,
-          'text-decoration-line-through': user.isOnHoliday
-        }">
-        <span class="fw-bold">{{ user.name }}</span>
-      </li>
-    </ul>
-  </div>
-</div>
+      <!-- esempio di utilizzo della direttiva ngClass per applicare classi CSS dinamicamente in base a una condizione -->
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let user of data"
+          [ngClass]="{
+            'styleOnline fontSizeOnline': user.isOnline,
+            styleOffline: !user.isOnline,
+            'text-decoration-line-through': user.isOnHoliday
+          }">
+          <span class="fw-bold">{{ user.name }}</span>
+        </li>
+      </ul>
+    </div>
 
-<div class="mt-5 p-3">
-  <div id="example-data-from-child-to-parent">
-    <h2>Dati Child -> Parent</h2>
+    <div id="example-data-from-child-to-parent" class="col">
+      <h2>Dati Child -> Parent</h2>
 
-    <!-- esempio di utilizzo di un evento personalizzato per inviare dati da un componente figlio a un componente genitore -->
-    <button
-      mat-raised-button
-      color="primary"
-      (click)="sendData.emit({ name: 'Test User', age: 25, isOnline: true, isOnHoliday: false })">
-      Click me!
-    </button>
+      <!-- esempio di utilizzo di un evento personalizzato per inviare dati da un componente figlio a un componente genitore -->
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="sendData.emit({ name: 'Test User', age: 25, isOnline: true, isOnHoliday: false })">
+        Click me!
+      </button>
+    </div>
   </div>
 </div>
