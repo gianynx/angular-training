@@ -10,7 +10,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = 'my-project';
 
   // esempio di utilizzo del decorator ViewChild per accedere a un elemento del template
-  @ViewChild('inputSaluti') inputSaluti!: ElementRef;
+  @ViewChild('inputSaluti') inputSaluti!: ElementRef<HTMLInputElement>;
 
   users: User[] = [
     { name: 'Mario', age: 30, isOnline: true, isOnHoliday: false },
